@@ -25,7 +25,7 @@ input{
 
 
 .wrap{
-    max-width: 500px;
+    max-width: 300px;
     margin: 0 auto;
 }
 
@@ -69,8 +69,10 @@ input{
 }
 
 .item{
-  height: 50px;
-  line-height:50px;
-  margin-top: 3px;
+  min-height: 40px;
+  line-height:40px;
+}
 
+.item:first-child{
+  margin-top: 7px;
 }
