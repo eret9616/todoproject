@@ -1,11 +1,10 @@
 *{
   box-sizing: border-box;
   position: relative;
-
 }
 
 body{
-  background: rgba(0,0,0,.02);
+    background: rgba(0,0,0,.02);
 }
 
 input,button,textarea{
@@ -60,4 +59,18 @@ input{
   padding: 15px;
 }
 
- 
+.btn-group{
+  display: none;
+}
+
+.item:hover .btn-group{
+  display: inline;
+
+}
+
+.item{
+  height: 50px;
+  line-height:50px;
+  margin-top: 3px;
+
+}

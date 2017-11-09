@@ -39,7 +39,6 @@ new Vue({
           me.check_alerts();
         },1000);
 
-
         Event.$on('remove',function(params){   //事件调度器
            if(params) me.remove(params);
         });
@@ -63,18 +62,21 @@ new Vue({
           var me = this;
           this.list.forEach(function (row,i) {
             var alert_at = row.alert_at;
-              if(!alert_at || row.alert_confirmed) {  alert_sound.pause(); return};
-              console.log("row.alert_at:",row.alert_at);
+
+              if(!alert_at || row.alert_confirmed) {     return};
+
+
 
               var alert_at = (new Date(alert_at)).getTime();  //获取时间戳
               var now = (new Date()).getTime();
-              console.log("timestamp",alert_at);
+
 
               if(now>=alert_at)
               {
                 alert_sound.play();
                 var confirmed = confirm(row.title);
                 Vue.set(me.list[i],'alert_confirmed',confirmed);
+
               }
 
           })
@@ -131,7 +133,7 @@ new Vue({
           var i = this.list.findIndex(function(item){return item.id == id; });
            //vue不能直接改data里数组的内容
           Vue.set(  this.list[i], 'completed', !this.list[i].completed);
-        }
+        },
 
       },
       watch:{
