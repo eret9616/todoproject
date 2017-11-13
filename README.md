@@ -1,6 +1,6 @@
 # todoproject
 使用了localstorage本地储存数据功能的Vue todolist。<br>
-##参考了biaoyansu的todolist##
+#参考了biaoyansu的todolist#
 
 #
 ![image](https://github.com/eret9616/todoproject/blob/master/show.gif)
